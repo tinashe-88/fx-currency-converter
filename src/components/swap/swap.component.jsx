@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Swap = ({ children }) => (  
-    <div>
-        <button 
-            className="btn btn-light col-lg-2 col-md-2 col-sm-2 align-self-center"
-            style={{cursor:'pointer'}}
-        >
-            { children }
-        </button>
-    </div>
+    
+    <button 
+        className="btn btn-outline-success btn-block"
+        style={{cursor:'pointer',fontSize:'20px',fontWeight:'bold'}}
+    >
+        { children }
+    </button>
+    
 )
 
 export default Swap
