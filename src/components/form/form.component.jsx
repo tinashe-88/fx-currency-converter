@@ -39,15 +39,32 @@ class Form extends Component {
             fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
                 .then(res => res.json())
                 .then(data => {
-                    const date = data.dates
+                    const date = data.date
                     const result = (data.rates[this.state.convertTo] * this.state.amount).toFixed(2)
 
                     this.setState({
-                        result, date
+                        result,
+                        date
                     })
                 })
         }
 
+    }
+
+    handleSwap = e => {
+        const base = this.state.base
+        const convertTo = this.state.convertTo
+        
+        e.preventDefault()
+        this.setState(
+            {
+                convertTo: base,
+                base: convertTo,
+                result: null
+            },
+
+            this.calculateAmount
+        )
     }
     
     render(){
@@ -55,11 +72,13 @@ class Form extends Component {
 
         return (
             <div className="col-lg-10 col-md-10 col-sm-10">
-                <h2>{amount} {base}</h2>
+                <h2>{ amount } { base }</h2>
                 <h3>
-                    {result === null ? 'Calculating ' : result} {convertTo}
+                    { amount === '' ?  '0' : result === null ? 0 : result} {convertTo}
                 </h3>
-                <p className="my-4">As of: {date}</p>
+                <p className="my-4">
+                    {amount === '' ? '' : date === null ? '' : date}
+                </p>
 
                 <form className="form-inline mb-4">
                     <label>From: </label>
@@ -90,7 +109,7 @@ class Form extends Component {
                     <input 
                         disabled={true}
                         type="number"
-                        value={result === null ? 'Calculating...' : result}
+                        value={result === null ? 0 : result}
                         className="form-control form-control-ls mx-3"
                     />
                     <select 
@@ -107,7 +126,11 @@ class Form extends Component {
                         )}
                     </select>
                 </form>
-                <Swap/>
+                <div onClick={this.handleSwap}>
+                    <Swap>
+                        &#8639;&#8642;
+                    </Swap>
+                </div>
             </div>
         )
     }
