@@ -12,8 +12,8 @@ const Converter = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 mx-auto">
-                        <h1 className="display-4 my-4 text-center">FX Currency Converter</h1>
-                        <div className="card-deck shadow-sm bg-light rounded">
+                        <h1 className="display-4 my-5 text-center">FX Currency Converter</h1>
+                        <div className="card-deck shadow bg-light rounded">
                             <Form/>
                         </div>
                     </div>

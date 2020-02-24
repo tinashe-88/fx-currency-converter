@@ -106,7 +106,10 @@ class Form extends Component {
                         </select>                       
                     </form>
 
-                    <div onClick={this.handleSwap} className="col-lg-2 col-md-4 mb-3 align-self-center">
+                    <div 
+                        onClick={this.handleSwap} 
+                        className="col-lg-2 col-md-4 mb-3 align-self-center"
+                    >
                         <Swap>
                             &#8639;&#8642;
                         </Swap>

@@ -3,7 +3,7 @@ import React from 'react'
 import Logo from '../logo/logo.component'
 
 const NavBar = () => (
-    <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-secondary border-bottom shadow-sm">
+    <div className="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 mb-3 bg-secondary border-bottom shadow-sm">
         <Logo/>
         <nav className="nav my-2 my-md-0 mr-md-3 justify-content-end">   
             <a 
