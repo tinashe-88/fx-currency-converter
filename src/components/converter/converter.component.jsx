@@ -5,23 +5,22 @@ import Footer from '../footer/footer.component'
 import NavBar from '../navbar/navbar.component'
 
 const Converter = () => {
-
-    return (
-        <div>
-            <NavBar/>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-8 mx-auto">
-                        <h1 className="display-4 my-5 text-center">FX Currency Converter</h1>
-                        <div className="card-deck shadow bg-light rounded">
-                            <Form/>
-                        </div>
-                    </div>
-                </div>
-                <Footer/>
+  return (
+    <div>
+      <NavBar/>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto">
+            <h1 className="display-4 my-5 text-center">FX Currency Converter</h1>
+            <div className="card-deck shadow bg-light rounded">
+              <Form/>
             </div>
+          </div>
         </div>
-    )
+        <Footer/>
+      </div>
+    </div>
+  )
 }
 
 export default Converter

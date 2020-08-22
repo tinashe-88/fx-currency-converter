@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   ReactComponent as SiteLogo
-} from './logo'
+} from './logo.svg'
 
 const Logo = () => (
   <div className="my-0 mr-md-auto font-weight-normal">
