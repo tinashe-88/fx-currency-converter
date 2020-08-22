@@ -1,13 +1,10 @@
 import React from 'react';
 
 import Form from '../form/form.component'
-import Footer from '../footer/footer.component'
-import NavBar from '../navbar/navbar.component'
 
 const Converter = () => {
   return (
-    <div>
-      <NavBar/>
+    <>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">
@@ -17,9 +14,8 @@ const Converter = () => {
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
-    </div>
+    </>
   )
 }
 
